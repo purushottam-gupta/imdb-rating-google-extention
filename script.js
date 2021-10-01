@@ -1,5 +1,5 @@
 var i = document.getElementById('search')
-
+var released = document.getElementById('released')
 var r = document.getElementById('rating')
 var votes = document.getElementById('votes')
 var rated = document.getElementById('rated')
@@ -19,10 +19,12 @@ i.addEventListener('keypress', async (e) => {
             r.innerHTML = data.imdbRating+"/10";
             votes.innerHTML = data.imdbVotes + " users";
             rated.innerHTML = data.Rated;
+            released.innerHTML= data.Released;
             } else {
                 r.innerHTML = "Not Found!";
                 votes.innerHTML = "Not Found!";
                 rated.innerHTML = "Not Found!";
+                released.innerHTML= "Not Found!";
             }
         } catch (err) {
             console.log(err);
